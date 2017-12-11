@@ -30,7 +30,7 @@
 
 import Foundation
 
-class NewsAPI {
+class NewsAPI: NSObject {
   
   static let service = NewsAPI()
   

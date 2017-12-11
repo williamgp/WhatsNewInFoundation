@@ -30,13 +30,13 @@
 
 import Foundation
 
-class Source: Codable, CustomStringConvertible {
+class Source: NSObject, Codable {
   let id: String
   let name: String
   let overview: String
   let category: String
   
-  var description: String {
+  override var description: String {
     return "id: \(id) - name: \(name) - overview: \(overview) - category: \(category)"
   }
   
@@ -46,7 +46,6 @@ class Source: Codable, CustomStringConvertible {
     case overview = "description"
     case category
   }
-  
   
   init(id: String, name: String, overview: String, category: String) {
     self.id = id
