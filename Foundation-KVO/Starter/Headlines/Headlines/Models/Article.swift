@@ -30,13 +30,22 @@
 
 import Foundation
 
-class Article {
+class Article: NSObject, Codable {
   let author: String
   let title: String
   let snippet: String
   let sourceURL: URL
   let imageURL: URL
   let published: Date
+  
+  enum CodingKeys: String, CodingKey {
+    case author
+    case title
+    case snippet = "description"
+    case sourceURL = "url"
+    case imageURL = "urlToImage"
+    case published = "publishedAt"
+  }
   
   init(author: String, title: String, snippet: String, sourceURL: URL, imageURL: URL, published: Date) {
     self.author = author
