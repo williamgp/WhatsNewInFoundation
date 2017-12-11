@@ -55,7 +55,8 @@ class ArticleListController: UITableViewController {
   
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    
+    token?.invalidate()
+    NewsAPI.service.resetArticles()
   }
 }
 
