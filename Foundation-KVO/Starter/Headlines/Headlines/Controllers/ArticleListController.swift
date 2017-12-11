@@ -32,6 +32,8 @@ import UIKit
 
 class ArticleListController: UITableViewController {
   
+  var token: NSKeyValueObservation?
+  
   var source: Source?
   private let formatter = DateFormatter()
   
@@ -42,7 +44,12 @@ class ArticleListController: UITableViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    
+    guard let source = source else { return }
+    token = NewsAPI.service.observe(\.articles, changeHandler: { _, _ in
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
+    })
   }
   
   override func viewDidDisappear(_ animated: Bool) {

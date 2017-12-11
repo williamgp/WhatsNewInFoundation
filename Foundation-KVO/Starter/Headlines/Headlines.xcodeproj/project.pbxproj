@@ -33,7 +33,7 @@
 		7B49502D1F3B4A7300C5133B /* NewsAPI.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; tabWidth = 2; };
 		7B4950301F3B4D4B00C5133B /* SourceListController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SourceListController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		7B4950331F3B52FE00C5133B /* SourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCell.swift; sourceTree = "<group>"; };
-		7B4950351F3B59B500C5133B /* ArticleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListController.swift; sourceTree = "<group>"; };
+		7B4950351F3B59B500C5133B /* ArticleListController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ArticleListController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		7BBBCD8D1F3C4EF5006D87F7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7BBBCD8F1F3C4F9F006D87F7 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
