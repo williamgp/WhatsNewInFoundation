@@ -32,12 +32,12 @@ import Foundation
 
 class Article: NSObject, Codable {
   
-  let author: String
+  let author: String?
   let title: String
   let snippet: String
   let sourceURL: URL
   let imageURL: URL
-  let published: Date
+  let published: Date?
   
   enum CodingKeys: String, CodingKey {
     case author
