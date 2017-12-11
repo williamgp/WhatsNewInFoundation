@@ -49,6 +49,14 @@ class Article: NSObject, Codable {
   }
   
   required init(decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    title = try container.decode(String.self, forKey: .title)
+    sourceURL = try container.decode(URL.self, forKey: .sourceURL)
+    imageURL = try container.decode(URL.self, forKey: .imageURL)
+    author = try container.decodeIfPresent(String.self, forKey: .author)
+    published = try container.decodeIfPresent(Date.self, forKey: .published)
+    let rawSnippet = try container.decode(String.self, forKey: .snippet)
+    snippet = rawSnippet.deletingCharacters(in: .newlines)
   }
   
   init(author: String, title: String, snippet: String, sourceURL: URL, imageURL: URL, published: Date) {
