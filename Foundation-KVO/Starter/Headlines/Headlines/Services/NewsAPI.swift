@@ -36,6 +36,7 @@ class NewsAPI: NSObject {
   
   private struct Response: Codable {
     let sources: [Source]?
+    let articles: [Article]?
   }
   
   private enum API {
