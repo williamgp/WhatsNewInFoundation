@@ -73,8 +73,15 @@ class NewsAPI {
   
   func fetchSources() {
     API.sources.fetch { data in
-      if let json = String(data: data, encoding: .utf8) {
-        print(json)
+      do {
+        if let sources = try JSONDecoder().decode(Response.self, from: data).sources {
+          self.sources = sources
+          for source in sources {
+            print(source)
+          }
+        }
+      }  catch {
+        print("decoding error")
       }
     }
   }
