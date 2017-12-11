@@ -48,6 +48,9 @@ class Article: NSObject, Codable {
     case published = "publishedAt"
   }
   
+  required init(decoder: JSONDecoder) throws {
+    <#statements#>
+  }
   
   init(author: String, title: String, snippet: String, sourceURL: URL, imageURL: URL, published: Date) {
     self.author = author
