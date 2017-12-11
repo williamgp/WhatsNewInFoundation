@@ -32,6 +32,8 @@ import UIKit
 
 class SourceListController: UITableViewController {
   
+  private var token: NSKeyValueObservation?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
