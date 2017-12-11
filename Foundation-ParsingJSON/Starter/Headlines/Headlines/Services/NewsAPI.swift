@@ -35,7 +35,7 @@ class NewsAPI {
   static let service = NewsAPI()
   
   private struct Response: Codable {
-    
+    let sources: [Source]?
   }
     
   private enum API {
