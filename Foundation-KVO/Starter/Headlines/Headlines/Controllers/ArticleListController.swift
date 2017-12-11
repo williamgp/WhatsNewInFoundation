@@ -50,6 +50,7 @@ class ArticleListController: UITableViewController {
         self.tableView.reloadData()
       }
     })
+    NewsAPI.service.fetchArticles(for: source)
   }
   
   override func viewDidDisappear(_ animated: Bool) {
