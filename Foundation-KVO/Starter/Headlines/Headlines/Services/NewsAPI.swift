@@ -85,6 +85,8 @@ class NewsAPI: NSObject {
   
   func fetchArticles(for source: Source) {
     API.articles(source).fetch { data in
+      let decoder = JSONDecoder()
+      decoder.dateDecodingStrategy = .iso8601
       
     }
   }
