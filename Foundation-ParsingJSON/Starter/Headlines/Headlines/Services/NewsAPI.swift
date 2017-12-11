@@ -40,7 +40,7 @@ class NewsAPI {
      Head on over to https://newsapi.org/register to get your
      free API key, and then replace the value below with it.
      */
-    private static let key = "00000000000000000000000000000000"
+    private static let key = "5ab3659d3320464caf3c4158d097f555"
     
     case sources
     case articles(Source)
