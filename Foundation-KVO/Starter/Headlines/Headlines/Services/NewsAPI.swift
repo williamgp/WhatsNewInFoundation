@@ -38,14 +38,9 @@ class NewsAPI {
     let sources: [Source]?
   }
   
-  
   private enum API {
     private static let basePath = "https://newsapi.org/v1"
-    /*
-     Head on over to https://newsapi.org/register to get your
-     free API key, and then replace the value below with it.
-     */
-    private static let key = "c6c1929ea3114250a49b0a3f3edaa735"
+    private static let key = "5ab3659d3320464caf3c4158d097f555"
     
     case sources
     case articles(Source)
