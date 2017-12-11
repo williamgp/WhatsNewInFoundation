@@ -30,11 +30,22 @@
 
 import Foundation
 
-class Source {
+class Source: Codable, CustomStringConvertible {
   let id: String
   let name: String
   let overview: String
   let category: String
+  
+  var description: String {
+    return "id: \(id), name: \(name), overview: \(overview), category: \(category)"
+  }
+  
+  enum CodingKeys: String, CodingKey {
+    case id
+    case name
+    case overview = "description"
+    case category
+  }
   
   init(id: String, name: String, overview: String, category: String) {
     self.id = id
