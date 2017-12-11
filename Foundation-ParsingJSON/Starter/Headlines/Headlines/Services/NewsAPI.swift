@@ -34,6 +34,10 @@ class NewsAPI {
   
   static let service = NewsAPI()
   
+  private struct Response: Codable {
+    
+  }
+    
   private enum API {
     private static let basePath = "https://newsapi.org/v1"
     /*
