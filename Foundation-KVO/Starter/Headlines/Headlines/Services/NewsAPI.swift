@@ -66,7 +66,7 @@ class NewsAPI: NSObject {
   }
   
   @objc dynamic private(set) var sources: [Source] = []
-  private(set) var articles: [Article] = []
+  @objc dynamic private(set) var articles: [Article] = []
   
   func fetchSources() {
     API.sources.fetch { data in
